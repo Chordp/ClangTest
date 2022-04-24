@@ -38,24 +38,24 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 	
   </PropertyGroup>
     
-  <Import Condition="Exists('$(WDKContentRoot)build\WindowsDriver.Default.props')" Project="$(WDKContentRoot)build\WindowsDriver.Default.props"/>
+  <Import Condition="Exists('$(WDKContentRoot)build\$(WDKBuildFolder)\WindowsDriver.Default.props')" Project="$(WDKContentRoot)build\$(WDKBuildFolder)\WindowsDriver.Default.props"/>
 
   <Import Project="$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\WindowsKernelModeDriver10.0\ImportBefore\*.props" Condition="Exists('$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\WindowsKernelModeDriver10.0\ImportBefore')" />
   
-  <Import Project="$(WDKContentRoot)\build\$(Platform)\WindowsKernelModeDriver\*.props" />
+  <Import Project="$(WDKContentRoot)\build\$(WDKBuildFolder)\$(Platform)\WindowsKernelModeDriver\*.props" />
 
   <PropertyGroup>
-    <V141PropsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\v141\Toolset.props</V141PropsFile>
     <V142PropsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\v142\Toolset.props</V142PropsFile>
+    <V143PropsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\v143\Toolset.props</V143PropsFile>
     <ClangPropsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\llvm\Toolset.props</ClangPropsFile>
     
   </PropertyGroup>
   <Import Condition="Exists('$(ClangPropsFile)')" Project="$(ClangPropsFile)" />
 
-  <Import Condition="!Exists('$(V142PropsFile)')" Project="$(V142PropsFile)" />
-  <Import Condition="!Exists('$(V142PropsFile)')" Project="$(V141PropsFile)" />
+  <Import Condition="!Exists('$(V143PropsFile)')" Project="$(V143PropsFile)" />
+  <Import Condition="!Exists('$(V143PropsFile)')" Project="$(V142PropsFile)" />
   
-  <Import Condition="Exists('$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\WDK.props') AND '$(LegacyTargetVersion)' == 'false'" Project="$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\WDK.props" />
-  <Import Condition="Exists('$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\WDK.Legacy.props') AND '$(LegacyTargetVersion)' == 'true'" Project="$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\WDK.Legacy.props" />
+  <Import Condition="Exists('$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\$(WDKBuildFolder)\WDK.props') AND '$(LegacyTargetVersion)' == 'false'" Project="$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\$(WDKBuildFolder)\WDK.props" />
+  <Import Condition="Exists('$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\$(WDKBuildFolder)\WDK.Legacy.props') AND '$(LegacyTargetVersion)' == 'true'" Project="$(WDKContentRoot)\DesignTime\CommonConfiguration\Neutral\WDK\$(WDKBuildFolder)\WDK.Legacy.props" />
   
 </Project>
