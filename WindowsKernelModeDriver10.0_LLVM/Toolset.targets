@@ -20,10 +20,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <V142TargetsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\v142\Toolset.targets</V142TargetsFile>
     <V143TargetsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\v143\Toolset.targets</V143TargetsFile>
     <ClangTargetsFile>$(VCTargetsPath)\Platforms\$(Platform)\PlatformToolsets\llvm\Toolset.targets</ClangTargetsFile>
-
   </PropertyGroup>
   
-  <Import Project="$(WDKContentRoot)\build\WindowsDriver.common.targets" Condition="Exists('$(WDKContentRoot)\build\WindowsDriver.common.targets')"/>
+  <Import Project="$(WDKContentRoot)\build\$(WDKBuildFolder)\WindowsDriver.common.targets" Condition="Exists('$(WDKContentRoot)\build\$(WDKBuildFolder)\WindowsDriver.common.targets')"/>
   <Import Condition="Exists('$(ClangTargetsFile)')" Project="$(ClangTargetsFile)" />
   <Import Condition="!Exists('$(V143TargetsFile)')" Project="$(V143TargetsFile)" />
   <Import Condition="!Exists('$(V143TargetsFile)')" Project="$(V142TargetsFile)" />
