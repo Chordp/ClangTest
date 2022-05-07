@@ -51,7 +51,6 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     
   </PropertyGroup>
   <Import Condition="Exists('$(ClangPropsFile)')" Project="$(ClangPropsFile)" />
-
   <Import Condition="!Exists('$(V143PropsFile)')" Project="$(V143PropsFile)" />
   <Import Condition="!Exists('$(V143PropsFile)')" Project="$(V142PropsFile)" />
   
