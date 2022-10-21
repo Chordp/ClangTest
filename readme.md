@@ -59,9 +59,10 @@ LLVM_DIR
 
 LLVM 官方下载地址:[LLVM](https://releases.llvm.org/)
 ##### 2.安装LLVM插件
-**Vs2019** 插件下载地址:[llvm2019](https://marketplace.visualstudio.com/items?itemName=MarekAniola.mangh-llvm2019)
-**Vs2017** 插件下载地址:[LLVM Compiler Toolchain](https://marketplace.visualstudio.com/items?itemName=LLVMExtensions.llvm-toolchain)
-**2017以下不支持**
+* **Vs2022** 插件下载地址: [llvm2019 for vs 2022](https://github.com/KomiMoe/llvm2019/tree/2022)
+* **Vs2019** 插件下载地址: [llvm2019](https://marketplace.visualstudio.com/items?itemName=MarekAniola.mangh-llvm2019)
+* **Vs2017** 插件下载地址: [LLVM Compiler Toolchain](https://marketplace.visualstudio.com/items?itemName=LLVMExtensions.llvm-toolchain)
+* **2017以下不支持**
 
 ##### 3.修改WDK配置
 ###### 1.打开**PlatformToolsets**目录
